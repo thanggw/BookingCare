@@ -1,0 +1,13 @@
+npx sequelize-cli model:generate --name User --attributes firstName:string,lastName:string,email:string
+model:generate tạo ra kế hoạch (model và migration).
+
+npx sequelize-cli db:migrate
+db:migrate thực hiện kế hoạch đó vào cơ sở dữ liệu thực tế.
+
+seeder: chèn dữ liệu vào bảng do migartion tạo
+npx sequelize-cli seed:generate --name demo-user
+npx sequelize-cli db:seed:all
+
+
+ở model (tức là tạo db) thì bảng nào độc lập (không có quan hệ gì với bảng khác) thì thêm s sau tên(file migration)
+còn bảng nào có quan hệ thì không cần s
