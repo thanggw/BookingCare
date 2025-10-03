@@ -1,0 +1,104 @@
+#customers {
+  font-family: Arial, Helvetica, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+#customers td,
+#customers th {
+  border: 1px solid #ddd;
+  padding: 8px;
+}
+
+#customers tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
+
+#customers tr:hover {
+  background-color: #ddd;
+}
+
+#customers th {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  text-align: left;
+  background-color: #04aa6d;
+  color: white;
+}
+
+/* Nút Edit */
+.btn-edit {
+  background-color: #4caf50; /* xanh lá */
+  border: none;
+  color: white;
+  padding: 6px 12px;
+  margin-right: 4px;
+  font-size: 14px;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.btn-edit:hover {
+  background-color: #45a049;
+}
+
+/* Nút Delete */
+.btn-delete {
+  background-color: #f44336; /* đỏ */
+  border: none;
+  color: white;
+  padding: 6px 12px;
+  font-size: 14px;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.btn-delete:hover {
+  background-color: #da190b;
+}
+
+/* Icon trong nút */
+.btn-edit i,
+.btn-delete i {
+  pointer-events: none; /* để click vào icon vẫn click được button */
+}
+
+.modal-user-container {
+  .modal-content {
+    .modal-header {
+      button {
+        background-color: transparent; //trong suốt
+        border: none;
+        color: white;
+        font-size: 27px;
+        margin-right: 5px;
+      }
+    }
+  }
+
+  .modal-user-body {
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap;
+    .input-container {
+      display: flex;
+      flex-direction: column;
+      width: 49%;
+
+      &.max-width-container {
+        //đứng ngang hàng với container
+        width: 100%;
+      }
+
+      input {
+        border-radius: 3px;
+        border: 1px solid grey;
+        height: 30px;
+        outline: none;
+        padding: 0 10px;
+      }
+    }
+  }
+}
